@@ -12,6 +12,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/core-database" />
+            <option value="$PROJECT_DIR$/core-datastore" />
+            <option value="$PROJECT_DIR$/core-di" />
+            <option value="$PROJECT_DIR$/core-model" />
+            <option value="$PROJECT_DIR$/core-ui" />
+            <option value="$PROJECT_DIR$/download-video" />
+            <option value="$PROJECT_DIR$/feature-download" />
+            <option value="$PROJECT_DIR$/feature-filevideo" />
           </set>
         </option>
       </GradleProjectSettings>

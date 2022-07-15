@@ -1,4 +1,4 @@
-package com.ruicomp.downloader.fbreels.ui.theme
+package com.ruicomp.downloader.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle

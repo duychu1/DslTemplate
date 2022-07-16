@@ -1,5 +1,3 @@
-include(":core-ui")
-
 pluginManagement {
     repositories {
         gradlePluginPortal()
@@ -17,10 +15,10 @@ dependencyResolutionManagement {
 rootProject.name = "ReelSave"
 include(":app")
 include(":core-ui")
-include(":core-database")
 include(":core-model")
+include(":core-database")
+include(":core-datastore")
 include(":download-video")
-include(":core-di")
 include(":feature-download")
 include(":feature-filevideo")
-include(":core-datastore")
+

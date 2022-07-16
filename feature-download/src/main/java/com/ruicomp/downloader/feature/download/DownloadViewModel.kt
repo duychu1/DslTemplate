@@ -11,7 +11,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import com.ruicomp.downloader.core.datastore.MyDatastore
 import com.ruicomp.downloader.core.model.VideoInfo
+import com.ruicomp.downloader.core.ui.components.toasttext
 import com.ruicomp.downloader.download.video.Result
+import com.ruicomp.downloader.feature.download.fake.Iap
+import com.ruicomp.downloader.feature.download.fake.ManagerInterAds
 import com.ruicomp.downloader.feature.download.repository.DownloadVideoRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
@@ -27,6 +30,9 @@ class DownloadViewModel @Inject constructor(
     private val downloadVideoRepository: DownloadVideoRepository,
     val iap: Iap
 ) : ViewModel() {
+
+    var appVip = true
+
     var receiveUrl: String? = null
 
     private val _statusState = mutableStateOf("Let start")
@@ -58,7 +64,7 @@ class DownloadViewModel @Inject constructor(
         iap.iapConnector?.subscribe(context as Activity, "remove_ads_6m")
     }
 
-    fun createInterAds(context: Context, isVip: Boolean = App.isVip) {
+    fun createInterAds(context: Context, isVip: Boolean = appVip) {
         if (isVip) return
         if (managerAds.admobInters.mInterstitialAd == null) {
             dlog("create admob inter")
@@ -66,11 +72,9 @@ class DownloadViewModel @Inject constructor(
         }
         if (managerAds.applovinInters.maxInterstitialAd == null) {
             dlog("create applovin inter")
-//            context as Activity
             managerAds.applovinInters.createAd(context as Activity)
         }
     }
-
 
     fun onEvent(event: Event) {
         when (event) {
@@ -177,7 +181,7 @@ class DownloadViewModel @Inject constructor(
         dlog("window focus viewmodel")
     }
 
-    private suspend fun getDataAndDownload(context: Context, isVip: Boolean = iap.vip) {
+    private suspend fun getDataAndDownload(context: Context, isVip: Boolean = appVip) {
         if (!isVip) {
             withContext(Dispatchers.Main) {
                 managerAds.showInters(context)
@@ -185,7 +189,7 @@ class DownloadViewModel @Inject constructor(
         }
 
         rateSetup(context)
-        vipCheck()
+        vipCheck(context)
 
         toastCoroutine(context, "Downloading...")
         //first step for download
@@ -229,11 +233,11 @@ class DownloadViewModel @Inject constructor(
         }
     }
 
-    private fun vipCheck() {
-        if (App.isVip != iap.vip) {
+    private fun vipCheck(context: Context) {
+        if (appVip != iap.vip) {
             CoroutineScope(Dispatchers.IO).launch {
-                App.isVip = iap.vip
-                MyDatastore.saveToDatastore(App.appcontext, "isVip", iap.vip)
+                appVip = iap.vip
+                MyDatastore.saveDatastore(context, "isVip", iap.vip)
             }
         }
     }
@@ -259,14 +263,14 @@ class DownloadViewModel @Inject constructor(
     }
 
     private fun openTiktok() {
-        val intent: Intent? =
-            App.appcontext.packageManager.getLaunchIntentForPackage("com.ss.android.ugc.trill")
-
-        try {
-            App.appcontext.startActivity(intent)
-        } catch (e: Exception) {
-            e.printStackTrace()
-        }
+//        val intent: Intent? =
+//            App.appcontext.packageManager.getLaunchIntentForPackage("com.ss.android.ugc.trill")
+//
+//        try {
+//            App.appcontext.startActivity(intent)
+//        } catch (e: Exception) {
+//            e.printStackTrace()
+//        }
 
     }
 

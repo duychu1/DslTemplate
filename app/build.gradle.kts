@@ -1,6 +1,8 @@
 plugins {
     id(Plugins.application)
     kotlin(Plugins.kotlin_android)
+    kotlin(Plugins.kotlin_kapt)
+    id(Plugins.hilt_module)
 }
 
 android {
@@ -51,12 +53,21 @@ android {
 
 dependencies {
 
+    implementation(project(Modules.core_ui))
+    implementation(project(Modules.feature_download))
+    implementation(project(Modules.feature_filevideo))
+
+
     implementation(Dependencies.Androidx.core_ktx)
-    implementation(Dependencies.Androidx.compose_ui)
-    implementation(Dependencies.Androidx.material3)
-    implementation(Dependencies.Androidx.compose_preview)
-    implementation(Dependencies.Androidx.lifecycle_runtime_ktx)
     implementation(Dependencies.Androidx.activity_compose)
+    implementation(Dependencies.Androidx.lifecycle_runtime_ktx)
+    implementation(Dependencies.Androidx.compose_ui)
+    implementation(Dependencies.Androidx.nav_compose)
+    implementation(Dependencies.system_ui_controller)
+
+
+    implementation(Dependencies.Hilt.android)
+    kapt(Dependencies.Hilt.android_compiler)
 
     testImplementation(Dependencies.Test.junit)
 

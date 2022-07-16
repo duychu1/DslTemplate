@@ -49,6 +49,7 @@ dependencies {
     api(Dependencies.Androidx.compose_foundation)
     api(Dependencies.Androidx.compose_preview)
 
+    implementation(Dependencies.compose_permissions)
     implementation(Dependencies.store_review)
     implementation(Dependencies.exoplayer)
 

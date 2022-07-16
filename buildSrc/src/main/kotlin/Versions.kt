@@ -24,6 +24,8 @@ object Versions {
     const val coroutines = "1.6.4"
     const val room = "2.4.2"
     const val hilt_compose = "1.0.0"
+    const val system_ui_controller = "0.24.11-rc"
+    const val compose_permissions = "0.17.0"
 
 
 }

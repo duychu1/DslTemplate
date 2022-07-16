@@ -53,11 +53,10 @@ var currentFocus = false
 
 @Composable
 fun DownloadScreen(
-    modifier: Modifier = Modifier,
     isWindowFocus: State<Boolean>,
     clipboard: ClipboardManager,
-    liveDataWindowFocus: MutableLiveData<Int>,
     openCloseDrawer:() -> Unit,
+    modifier: Modifier = Modifier,
     viewModel: DownloadViewModel = hiltViewModel()
 ) {
 

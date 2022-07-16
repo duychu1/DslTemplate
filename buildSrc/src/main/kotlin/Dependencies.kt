@@ -45,5 +45,7 @@ object Dependencies {
     const val exoplayer = "com.google.android.exoplayer:exoplayer:${Versions.exoplayer}"
     const val store_review = "com.google.android.play:review-ktx:${Versions.store_review}"
     const val coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+    const val system_ui_controller = "com.google.accompanist:accompanist-systemuicontroller:${Versions.system_ui_controller}"
+    const val compose_permissions = "com.google.accompanist:accompanist-permissions:${Versions.compose_permissions}"
 
 }

@@ -14,3 +14,9 @@ data class VideoInfo(
         return VideoInfoEntity(id, title, uri, duration)
     }
 }
+
+fun VideoInfoEntity.asModel(): VideoInfo {
+    return VideoInfo(
+        id, title, uri, duration
+    )
+}

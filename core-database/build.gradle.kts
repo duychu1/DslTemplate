@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-    implementation(project(Modules.core_model))
 
     implementation(Dependencies.Androidx.room_ktx)
     ksp(Dependencies.Androidx.room_compiler)

@@ -15,6 +15,7 @@
         <entry key="core-ui/src/main/res/drawable/ic_launcher_foreground.xml" value="0.143" />
         <entry key="core-ui/src/main/res/drawable/ic_qrtikerdown.xml" value="0.1" />
         <entry key="feature-download/src/main/res/drawable/ic_swap_vert.xml" value="0.143" />
+        <entry key="feature-filevideo/src/main/res/drawable/ic_share.xml" value="0.116" />
       </map>
     </option>
   </component>

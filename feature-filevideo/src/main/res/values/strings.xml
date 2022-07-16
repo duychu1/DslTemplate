@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TikerDown</string>
+<!--    <string name="Download">Download</string>-->
+<!--    <string name="Open_Tiktok">Open Tiktok</string>-->
+<!--    <string name="string_anno">Click Share -> Copy link -> Open TikerDown, your video automatic download (watch video tutorial, switch between 2 app quickly by Navigation gestures)</string>-->
+
+    <string name="title_download">Download</string>
+    <string name="title_file">File</string>
+<!--    <string name="rate_description">Wow!!! You just downloaded some videos. If you enjoy this app, take a few seconds to rate it. Thank you for your support!</string>-->
+<!--    <string name="header_description">Download Tiktok video \nNo watermark</string>-->
+<!--    <string name="link_tutorial">https://www.youtube.com/watch?v=g9H0ZL6Y5xs</string>-->
+
+<!--    <string name="licensing">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyXZ43ZyBaDlH55U5OE1V+8G/Q1JBgjeVzJT0SxogBkzTcfH+Q0hhbPSAIBwbr1j285f+0vJq/mRRsee3IOzjoi6BK1yNfwwB32S0h9RA89k0Hquf/wB5R4pAYnCqDjaQi8CSJpgQaxAEjQqbZe5YL/XoVIcVtll1xbIK0DmPl2M1TS3FJI+2DdwJgFMCxw6c+7j4syunxNBDdJjXSZrBALgwZuxLmKB1mbOmRYW62uBRAzHy4hYGUFoL1YMSM24dcWgCr8le0FWg0ZbyAJpiqXa66+l5JvPB7sk/wuoqvCwF59zwflU/cEkwbpHenB1bPQ5ev58BEPS1T3Ygm8IPcwIDAQAB</string>-->
+<!--    <string name="remove_ads">remove_ads</string>-->
+
+    <string name="banner_applovin">fead49763c5c7c7d</string>
+    <string name="native_template_applovin">5d7a784c305909f1</string>
+
+        testads
+    <string name="bannerAdId">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="nativeAdId">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="intersAdId">ca-app-pub-3940256099942544/1033173712</string>
+
+    <!--    real-->
+<!--    <string name="bannerAdId">ca-app-pub-7760319173244356/9971347805</string>-->
+<!--    <string name="nativeAdId">ca-app-pub-7760319173244356/1199370131</string>-->
+<!--    <string name="intersAdId">ca-app-pub-7760319173244356/8577250984</string>-->
+
+</resources>

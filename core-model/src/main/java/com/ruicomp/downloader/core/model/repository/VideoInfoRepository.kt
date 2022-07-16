@@ -1,8 +1,8 @@
 package com.ruicomp.downloader.core.model.repository
 
 import com.ruicomp.downloader.core.database.VideoInfoDao
-import com.ruicomp.downloader.core.database.asModel
 import com.ruicomp.downloader.core.model.VideoInfo
+import com.ruicomp.downloader.core.model.asModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject

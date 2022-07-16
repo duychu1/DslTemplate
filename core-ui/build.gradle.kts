@@ -43,7 +43,7 @@ dependencies {
     implementation(project(Modules.core_datastore))
 
     implementation(Dependencies.Androidx.core_ktx)
-    implementation(Dependencies.Androidx.material3)
+    api(Dependencies.Androidx.material3)
     api(Dependencies.Androidx.compose_ui_util)
     api(Dependencies.Androidx.compose_runtime)
     api(Dependencies.Androidx.compose_foundation)

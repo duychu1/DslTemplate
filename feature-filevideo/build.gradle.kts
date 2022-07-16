@@ -47,5 +47,8 @@ dependencies {
 
     implementation(Dependencies.Hilt.android)
     kapt(Dependencies.Hilt.android_compiler)
+    implementation(Dependencies.Hilt.nav_compose)
+    implementation(Dependencies.Hilt.compiler)
+
 
 }

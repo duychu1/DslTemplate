@@ -3,7 +3,6 @@ package com.ruicomp.downloader.core.database
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.ruicomp.downloader.core.model.VideoInfo
 
 const val DB_NAME = "videos_info_fb"
 
@@ -20,8 +19,4 @@ data class VideoInfoEntity (
 
 )
 
-fun VideoInfoEntity.asModel(): VideoInfo {
-    return VideoInfo(
-        id, title, uri, duration
-    )
-}
+

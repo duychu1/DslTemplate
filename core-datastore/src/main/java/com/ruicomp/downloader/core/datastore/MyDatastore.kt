@@ -17,7 +17,7 @@ val Context.dataStore: DataStore<Preferences> by preferencesDataStore(name = PRE
 
 object MyDatastore {
 
-    private suspend fun saveToDatastore(context: Context, key:String, value: Boolean) = withContext(
+    suspend fun saveToDatastore(context: Context, key:String, value: Boolean) = withContext(
         Dispatchers.IO){
 //        dlog("on saveToDataStore: value= $value")
         val preferencesKey = booleanPreferencesKey(key)

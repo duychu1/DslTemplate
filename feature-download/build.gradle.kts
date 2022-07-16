@@ -44,7 +44,12 @@ dependencies {
     implementation(project(Modules.core_ui))
     implementation(project(Modules.core_model))
     implementation(project(Modules.core_datastore))
+    implementation(project(Modules.download_video))
+
+    implementation(Dependencies.Androidx.constraintlayout_compose)
 
     implementation(Dependencies.Hilt.android)
     kapt(Dependencies.Hilt.android_compiler)
+    implementation(Dependencies.Hilt.nav_compose)
+    implementation(Dependencies.Hilt.compiler)
 }
